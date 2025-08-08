@@ -8,8 +8,8 @@ public class Base {
 	public void initializeBrowser() {
 		
 		driver = new ChromeDriver();
-		driver.get("https://www.obsqurazone.com/");
-		driver.manage().window().maximize();
+		driver.get("https://selenium.qabible.in/");  //open url.
+		driver.manage().window().maximize();   //maximize the url window.
 	}
 
 	public static void main(String[] args) {
