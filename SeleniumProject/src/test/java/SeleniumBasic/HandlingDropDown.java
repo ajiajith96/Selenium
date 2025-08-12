@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HandlingDropDown extends Base {
 	
-	public void handlingdropdown() {
+	/*public void handlingdropdown() {
 		
 		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
 		WebElement dropdown = driver.findElement(By.xpath("//select[@id='dropdowm-menu-1']"));
@@ -17,7 +17,7 @@ public class HandlingDropDown extends Base {
 		
 		//select.selectByVisibleText("JAVA");
 	
-	}
+	}*/
 	
 	public void handlingCheckBox() {
 		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
@@ -30,12 +30,12 @@ public class HandlingDropDown extends Base {
 		System.out.println(checkbox2.isSelected());
 	}
 	
-	public void handlingRadioButton() {
+	/*public void handlingRadioButton() {
 		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
 		WebElement radiobutton = driver.findElement(By.xpath("//input[@value='yellow']"));
 		radiobutton.click();
 		System.out.println(radiobutton.isSelected());
-	}
+	}*/
 	
 	
 
@@ -43,9 +43,9 @@ public class HandlingDropDown extends Base {
 		
 		HandlingDropDown drop = new HandlingDropDown();
 		drop.initializeBrowser();
-		drop.handlingdropdown();
+		//drop.handlingdropdown();
 		drop.handlingCheckBox();
-		drop.handlingRadioButton();
+		//drop.handlingRadioButton();
 		
 	}
 
