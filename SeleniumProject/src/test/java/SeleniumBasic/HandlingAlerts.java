@@ -27,13 +27,22 @@ public class HandlingAlerts extends Base{
 		//alert.accept();
 		alert.dismiss();
 	}
+	
+	public void verifyPromptAlert() {
+		driver.navigate().to("https://demoqa.com/alerts");
+        WebElement promptalert = driver.findElement(By.id("promtButton"));
+        promptalert.click();
+        Alert alert = driver.switchTo().alert();
+	    alert.sendKeys("PromptMessage");
+	    alert.accept();
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         HandlingAlerts Alerts = new HandlingAlerts();
         Alerts.initializeBrowser();
         //Alerts.verifySimpleAlert();
-        Alerts.verifyConfirmAlert();
-        
+        //Alerts.verifyConfirmAlert();
+        Alerts.verifyPromptAlert();
         
 	}
 
