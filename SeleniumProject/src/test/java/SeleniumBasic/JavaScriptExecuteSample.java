@@ -12,9 +12,9 @@ public class JavaScriptExecuteSample extends Base{
 		WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", showMessageButton);
-		js.executeScript("window.scrollBy(0,350)", "");  // for scrolling vertically or horizontally.(+ve value
-	}
-
+		js.executeScript("window.scrollBy(0,350)", "");  // for scrolling vertically or horizontally.(+ve value scroll downwards.
+	}                                                    // Scroll By - if two coordinates are given then will add the values and proceed.
+                                                         // Scroll to - if two coordinates are given then will see the diff between values of coordinates and then proceed the scrolling.
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		JavaScriptExecuteSample java = new JavaScriptExecuteSample();
