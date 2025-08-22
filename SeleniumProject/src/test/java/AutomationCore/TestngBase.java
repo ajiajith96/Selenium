@@ -18,6 +18,7 @@ public class TestngBase {
 	@AfterMethod
 	public void closeAndQuit() {
 		//driver.close();
+		driver.quit();
 	}
 
 }

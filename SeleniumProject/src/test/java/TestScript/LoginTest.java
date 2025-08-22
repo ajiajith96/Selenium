@@ -6,18 +6,23 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import AutomationCore.TestngBase;
+import Pages.LoginPage;
 
 public class LoginTest extends TestngBase{
 	
 	@Test
 	public void verifyUserLoginWithValidCredential() {
 		
-		WebElement UserName = driver.findElement(By.id("user-name"));
-		UserName.sendKeys("standard_user");
-		WebElement Password = driver.findElement(By.id("password"));
-		Password.sendKeys("secret_sauce");
-		WebElement LoginButton = driver.findElement(By.id("login-button"));
-		LoginButton.click();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.enterPasswordOnPasswordField();
+		loginpage.enterUserNameOnUserNameField();
+		loginpage.clickOnLoginButton();
+		//WebElement UserName = driver.findElement(By.id("user-name"));
+		//UserName.sendKeys("standard_user");
+		//WebElement Password = driver.findElement(By.id("password"));
+		//Password.sendKeys("secret_sauce");
+		//WebElement LoginButton = driver.findElement(By.id("login-button"));
+		//LoginButton.click();
 	}
     
 	@Test
